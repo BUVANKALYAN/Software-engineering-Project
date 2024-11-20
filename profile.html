@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="profile-container animated fadeIn">
+        <h2>User Profile</h2>
+        <p><strong>Username:</strong> {{ session['username'] }}</p>
+        <p><strong>Events Registered:</strong> {{ user_events['registered'] }}</p>
+        <p><strong>Events Created:</strong> {{ user_events['created'] }}</p>
+        <a href="{{ url_for('home') }}" class="back-link">Back to Home</a>
+    </div>
+</body>
+</html>
